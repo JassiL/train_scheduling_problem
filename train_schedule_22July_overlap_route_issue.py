@@ -1,9 +1,33 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 22 11:57:44 2019
+# Copyright 2010-2018 Google LLC
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-@author: Admin-dsc
-"""
+
+
+##################################################################################################
+# Problem statement: Assign 6 trains to 8 routes during a one day period
+#                    subject to the following constraints:
+#                   1. each train must be used during the day
+#                   2. a train must do at least one route during the day (max 2)
+#                   3. for each train, the cumulative km from the previous day + route length 
+#                      must not exceed 24,800 km
+#                   4. where the train is assigned to two routes during the day, these routes 
+#                      must not overlap
+##################################################################################################
+
+# this builds on Google OR-tools examples nurse rota schedule and 
+# shift scheduling    
+
+
 
 from itertools import combinations
 from ortools.sat.python import cp_model
